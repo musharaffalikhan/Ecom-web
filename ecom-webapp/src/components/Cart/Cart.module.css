@@ -1,0 +1,136 @@
+.cart-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 20rem;
+  overflow: auto;
+}
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+#cart {
+    display: none;
+    position: fixed;
+    top: 50px;
+    height: 95%;
+    right: 0px;
+    background-color: rgb(255, 255, 255);
+    min-height: 50vh;
+    margin: 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(177, 103, 103);
+    border-image: initial;
+}
+.container {
+    max-width: 900px;
+    margin: 0px auto;
+    padding: 20px 30px;
+}
+.cart h2 {
+    margin: 20px 0px;
+    padding: 0px;
+}
+section h2 {
+    font-family: "Metal Mania";
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+}
+#cart-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.cart-row {
+    font-size: 18px;
+    display: flex;
+}
+#cart-column {
+    display: flex;
+    align-items: center;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    border-bottom: 1px solid black;
+}
+.cart-item {
+    width: 45%;
+}
+.cart-price {
+    width: 35%;
+}
+.cart-quantity {
+    width: 25%;
+}
+.cart-total {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 1.2rem;
+    margin: 20px;
+}
+.cart-total .total-title {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+.purchase-btn:hover {
+    background-color: rgb(24, 172, 221);
+}
+
+.purchase-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 50px auto auto;
+    background: rgb(86, 204, 242);
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    border-radius: 8%;
+    padding: 12px;
+}
+
+.actions {
+  text-align: right;
+}
+
+.actions button {
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #8a2b06;
+  padding: 0.5rem 2rem;
+  border-radius: 25px;
+  margin-left: 1rem;
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: #5a1a01;
+  border-color: #5a1a01;
+  color: white;
+}
+
+.actions .button--alt {
+  color: #8a2b06;
+}
+
+.actions .button {
+  background-color: #8a2b06;
+  color: white;
+}

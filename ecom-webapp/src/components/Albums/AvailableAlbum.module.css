@@ -1,0 +1,37 @@
+.music-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .music-content div {
+    margin: 30px;
+  }
+  .music-content div h3 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  .music-content .prod-details {
+    display: flex;
+    margin: 8px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .music-content .shop-item-button {
+    cursor: pointer;
+    padding: 8px;
+    color: white;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 4%;
+    background: #56ccf2;
+  }
+  #music-content .shop-item-button:hover,
+  #merch-content .shop-item-button:hover {
+    background: #0eabdf;
+  }
+  

@@ -1,0 +1,13 @@
+.shop-item-button:hover {
+    background: #970606;
+}
+.shop-item-button {
+    cursor: pointer;
+    padding: 8px;
+    color: white;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 4%;
+    background: rgb(86, 3, 3);
+}
