@@ -1,43 +1,43 @@
 import Modal from "../UI/Modal";
 import classes from "./Cart.module.css";
-import CartItems from "./CartItems";
+import { useContext } from "react";
+import CartContext from "../../store/cart-context";
 
-const cartItemsarr = [
-  {
-    title: "Album 1",
-    price: 100,
-    imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
-    quantity: 2,
-  },
-  {
-    title: "Album 2",
-    price: 50,
-    imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
-    quantity: 3,
-  },
-  {
-    title: "Album 3",
-    price: 70,
-    imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Album%203.png",
-    quantity: 1,
-  },
-];
+const Cart = (props) => {
+  const cartCtx = useContext(CartContext);
+  const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
+  const hasItems = cartCtx.items.length > 0;
+  const cartProd = (
+    <ul className={classes["cart-items"]} >
+      {cartCtx.items.map((item, i) => (
+        <>
+    
 
-const Cart = () => {
-  const cartProd = cartItemsarr.map((item) => (
-    <CartItems
-      key={item.id}
-      title={item.title}
-      imageUrl={item.imageUrl}
-      price={item.price}
-    />
-  ));
+          <div id="cart-header" className={classes["cart-row"]} style={{marginTop: "10px"}}>
+          <span id="cart-column" className={classes["cart-item"]}>
+          <img src={item.imageURL} alt={item.title} style={{width:'40px', height:"30px", paddingRight: "5px"}}/>
+          {item.title}
+          </span>
+          <span id="cart-column" className={classes["cart-price"]}>
+          {item.price}   
+          </span>
+          <span id="cart-column" className={classes["cart-quantity"]}>
+          {item.amount}
+          </span>
+        </div>
+        </>
+      ))}
+    </ul>
+  );
+  console.log(cartCtx);
 
   return (
-    <Modal>
+    <Modal onClose={props.onClose}>
       <section id="cart" className={classes.container}>
         <h2 className={classes["cart-h2-section-h2"]}>CART</h2>
-
+        <button className={classes.cancel} onClick={props.onClose}>
+          X
+        </button>
         <div id="cart-header" className={classes["cart-row"]}>
           <span id="cart-column" className={classes["cart-item"]}>
             ITEMS
@@ -49,18 +49,21 @@ const Cart = () => {
             QUANTITY
           </span>
         </div>
-        <ul className={classes["cart-items"]}>{cartProd}</ul>
+        {cartProd}
+
         <div className={classes["cart-total"]}>
           <span>
             <span className={classes["total-title"]}>
               <strong>Total</strong>
-              <span id="total-value">34</span>
+              <span id="total-value">{totalAmount}</span>
             </span>
           </span>
         </div>
-        <button className={classes["purchase-btn"]} type="button">
-          PURCHASE
-        </button>
+        {hasItems && (
+          <button className={classes["purchase-btn"]} type="button">
+            PURCHASE
+          </button>
+        )}
       </section>
     </Modal>
   );

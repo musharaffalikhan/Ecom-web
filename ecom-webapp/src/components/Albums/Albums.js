@@ -1,8 +1,21 @@
+import { useContext } from "react";
+import CartContext from "../../store/cart-context";
 import AddToCart from "./AddToCart";
 import classes from "./Albums.module.css";
 
 const Albums = (props) => {
+    const cartCtx=  useContext(CartContext);
   const price = `$${props.price.toFixed(2)}`;
+
+  const addToCartHandler = amount =>{
+    cartCtx.addItem({
+        id:props.id,
+        title:props.title,
+        amount:amount,
+        price:props.price,
+        imageURL:props.imageUrl,
+    });
+  };
 
   return (
     <div className={classes["music-content-div"]}>
@@ -17,7 +30,7 @@ const Albums = (props) => {
         </div>
         <div className={classes["music-content-prod-details"]}>
           <span>{price}</span>
-          <AddToCart/>
+          <AddToCart onAddToCart={addToCartHandler}/>
         </div>
       </div>
     </div>

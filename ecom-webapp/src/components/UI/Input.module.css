@@ -10,9 +10,9 @@
   }
   
   .input input {
-    width: 3rem;
+    width: 2rem;
     border-radius: 5px;
     border: 1px solid #ccc;
     font: inherit;
-    padding-left: 0.5rem;
+    padding-left: 0.3rem;
   }
