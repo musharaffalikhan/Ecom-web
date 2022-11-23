@@ -8,28 +8,37 @@ const Cart = (props) => {
   const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
   const hasItems = cartCtx.items.length > 0;
   const cartProd = (
-    <ul className={classes["cart-items"]} >
+    <ul className={classes["cart-items"]}>
       {cartCtx.items.map((item, i) => (
         <>
-    
-
-          <div id="cart-header" className={classes["cart-row"]} style={{marginTop: "10px"}}>
-          <span id="cart-column" className={classes["cart-item"]}>
-          <img src={item.imageURL} alt={item.title} style={{width:'40px', height:"30px", paddingRight: "5px"}}/>
-          {item.title}
-          </span>
-          <span id="cart-column" className={classes["cart-price"]}>
-          {item.price}   
-          </span>
-          <span id="cart-column" className={classes["cart-quantity"]}>
-          {item.amount}
-          </span>
-        </div>
+          <div
+            id="cart-header"
+            className={classes["cart-row"]}
+            style={{ marginTop: "10px" }}
+          >
+            <span id="cart-column" className={classes["cart-item"]}>
+              <img
+                src={item.imageURL}
+                alt={item.title}
+                style={{ width: "40px", height: "30px", paddingRight: "5px" }}
+              />
+              {item.title}
+            </span>
+            <span id="cart-column" className={classes["cart-price"]}>
+              {item.price}
+            </span>
+            <span id="cart-column" className={classes["cart-quantity"]}>
+              {item.amount}
+            </span>
+          </div>
         </>
       ))}
     </ul>
   );
   console.log(cartCtx);
+  const onPurchaseHandler = ()=>{
+    alert('Thank you! Your purcahse has been confirmed');
+  }
 
   return (
     <Modal onClose={props.onClose}>
@@ -60,7 +69,7 @@ const Cart = (props) => {
           </span>
         </div>
         {hasItems && (
-          <button className={classes["purchase-btn"]} type="button">
+          <button className={classes["purchase-btn"]} type="button" onClick={onPurchaseHandler}>
             PURCHASE
           </button>
         )}

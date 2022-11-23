@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  text-align: center;
+  margin: 0;
+  padding: 0px;
+  padding-bottom: 30px;
+  background: rgb(86, 3, 3);
+  color: white;
+}
+header .latest-album {
+    display: block;
+    border: 1px solid #56CCF2;
+    padding: 15px 30px;
+    font-size: 23px;
+    font-weight: 200;
+    margin: 10px auto;
+    background: inherit;
+    cursor: pointer;
+    color: white;
+}
+header .play-btn {
+    cursor: pointer;
+    display: block;
+    border: 2px solid #56CCF2;
+    border-radius: 50%;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 200;
+    margin: 20px auto;
+    background: inherit;
+    color: #56CCF2;
+}
+ .tour-item {
+    display: flex;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+ .tour-item .tour-date {
+    width: 12%;
+}
+ .tour-item .tour-place {
+    width: 25%;
+    color: #777;
+}
+ .tour-item .tour-spec-place {
+    width: 53%;
+    color: #777;
+}
+ .tour-item .buy-btn {
+    cursor: pointer;
+    width: 20%;
+    background: #56CCF2;
+    color: white;
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header h1 {
+  padding: 40px;
+  font-size: 60px;
+}
+.header li {
+  margin: 0px 40px;
+}
+.header ul a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header ul {
+  display: flex;
+  padding: 20px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 200;
+  justify-content: center;
+  list-style-type: none;
+  border-bottom: 0.1rem solid white;
+  position: fixed;
+  top: 0%;
+  background: black;
+  width: 100%;
+  z-index: 1;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 30px;
+}
+section h2 {
+  font-family: "Mental Mania";
+  text-align: center;
+  padding: 20px;
+  font-size: 40px;
+}
+.img {
+  float: left;
+  margin: 2px 20px;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+.p {
+  font-size: 17px;
+  margin: 20px;
+  color: #777;
+}

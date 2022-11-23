@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  text-align: center;
+  margin: 0;
+  padding: 0px;
+  padding-bottom: 30px;
+  background: rgb(86, 3, 3);
+  color: white;
+}
+
+.header h1 {
+  padding: 40px;
+  font-size: 60px;
+}
+.header li {
+  margin: 0px 40px;
+}
+.header ul a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header ul {
+  display: flex;
+  padding: 20px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 200;
+  justify-content: center;
+  list-style-type: none;
+  border-bottom: 0.1rem solid white;
+  position: fixed;
+  top: 0%;
+  background: black;
+  width: 100%;
+  z-index: 1;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 30px;
+}
+section h2 {
+  font-family: "Mental Mania";
+  text-align: center;
+  padding: 20px;
+  font-size: 40px;
+}
+
+
+.header a:hover,
+.header a:active,
+.header a.active {
+  color: #95bcf0;
+  padding-bottom: 0.25rem;
+  border-bottom: 4px solid #95bcf0;
+}

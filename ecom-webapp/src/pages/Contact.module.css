@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  text-align: center;
+  margin: 0;
+  padding: 0px;
+  padding-bottom: 30px;
+  background: rgb(86, 3, 3);
+  color: white;
+}
+
+.header h1 {
+  padding: 40px;
+  font-size: 60px;
+}
+.header li {
+  margin: 0px 40px;
+}
+.header ul a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header ul {
+  display: flex;
+  padding: 20px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 200;
+  justify-content: center;
+  list-style-type: none;
+  border-bottom: 0.1rem solid white;
+  position: fixed;
+  top: 0%;
+  background: black;
+  width: 100%;
+  z-index: 1;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 30px;
+}
+section h2 {
+  font-family: "Mental Mania";
+  text-align: center;
+  padding: 20px;
+  font-size: 40px;
+}
+.control {
+    margin: 0 auto;
+    padding:20px 30px;
+    max-width: fit-content;
+  }
+  
+  .control label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+  
+  .control input,
+  .control textarea {
+    display: block;
+    width: 100%;
+    font: inherit;
+    padding: 0.2rem;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+  }
+  
+  .control input:focus,
+  .control textarea:focus {
+    outline: none;
+    border-color: #230052;
+  }
+  .control button{
+    cursor: pointer;
+    padding: 8px;
+    align-items: center;  
+    color: white;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 4%;
+    background: rgb(86, 3, 3); 
+  }
+  .control button:hover{
+    background: #970606;
+  }
