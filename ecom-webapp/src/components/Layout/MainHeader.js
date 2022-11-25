@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import classes from "./MainHeader.module.css";
 
 
@@ -21,22 +21,22 @@ const [state, setState] = useState(false)
       <nav>
         <ul className={classes["header-ul"]}>
           <li className={classes["header-li"]}>
-            <NavLink activeClassName={classes.active} className={classes["header-ul-a"]} to="/home">
+            <a  activeClassName={classes.active} className={classes["header-ul-a"]} href="/home">
               HOME
-            </NavLink>
+            </a>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to="/store">STORE</NavLink>
+            <a activeClassName={classes.active} href="/store">STORE</a>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to="/aboutpage">ABOUT</NavLink>
+            <a activeClassName={classes.active} href="/aboutpage">ABOUT</a>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to="/contactus">CONTACT</NavLink>
+            <a activeClassName={classes.active} href="/contactus">CONTACT</a>
           </li> 
           {
             !checkToken() &&     <li>
-            <NavLink activeClassName={classes.active} to="/login">LOGIN</NavLink>
+            <a activeClassName={classes.active} href="/login">LOGIN</a>
           </li>
           }
 

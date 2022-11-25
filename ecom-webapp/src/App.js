@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div>
-      <main>
+       <main> 
         <Switch>
           <Route path="/store" exact>
             {cartIsShown && <Cart onClose={hideCartHandler} />}
